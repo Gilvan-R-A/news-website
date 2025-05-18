@@ -2,7 +2,7 @@ export default class PostagemService{
 
     async listar(){
         try {
-            let resposta = await fetch('http://localhost:3000/postagem');
+            let resposta = await fetch('https://news-api-u1bc.onrender.com/postagem');
             return resposta.json();
         } catch (error) {
             console.log(error);
@@ -15,7 +15,7 @@ export default class PostagemService{
 
     async cadastrar(postagem){
         try {
-            let resposta = await fetch('http://localhost:3000/postagem', {
+            let resposta = await fetch('https://news-api-u1bc.onrender.com/postagem', {
                 method: 'post',
                 headers: {
                     'Accept' : 'application/json',
