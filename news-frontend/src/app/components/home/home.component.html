@@ -1,1 +1,9 @@
-<p>home works!</p>
+<div class="container">
+    <h1>Notícias</h1>
+
+    <div *ngFor="let post of postagens" class="card">
+        <h2>{{post.titulo}}</h2>
+        <p>{{post.conteudo}}</p>
+        <small>Categoria: {{post.categoria}} | Data: {{post.data}}</small>
+    </div>
+</div>
