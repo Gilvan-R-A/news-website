@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { environment } from "../../environments/environment.prod";
+import { environment } from "../../environments/environment";
 import { Observable, tap } from "rxjs";
 
 @Injectable({
@@ -8,14 +8,21 @@ import { Observable, tap } from "rxjs";
 })
 
 export class AuthService {
-    private apiUrl = `${environment.apiUrl}/usuarioLogin`;
+    private apiUrl = `${environment.apiUrl}/usuarios/login`;
 
     constructor(private http: HttpClient) {}
 
     login(email: string, senha: string): Observable<any> {
-        return this.http.post<any>(this.apiUrl, { email, senha }).pipe(
+        return this.http.post<any>(this.apiUrl, {
+             emailUsuario: email, 
+             senhaUsuario: senha 
+            }).pipe(
             tap(response => {
-                localStorage.setItem('token', response.token);
+
+                if (response.token) {
+                    localStorage.setItem('token', response.token);
+                }
+                
             })
         );
     }
