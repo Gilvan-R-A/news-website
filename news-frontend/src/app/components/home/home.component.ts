@@ -1,19 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import { PostagemService } from '../../services/postagem.service';
-import { Postagem } from '../../models/postagem';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
+import { PostagemService } from '../../services/postagem.service';
+
+
+import { Postagem } from '../../models/postagem';
+
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
   postagens: Postagem[] = [];
 
-  constructor(private postagemService: PostagemService) {}
+  constructor(
+    private authService: AuthService,
+    private postagemService: PostagemService
+  ) {}
 
   ngOnInit() {
     this.postagemService.listar().subscribe({
@@ -24,6 +32,11 @@ export class HomeComponent implements OnInit {
         console.error('Erro ao buscar postagens:', erro);
       }
     });
+  }
+
+  logout():void {
+    this.authService.logout();
+    window.location.href = '/login';  
   }
 
 }
