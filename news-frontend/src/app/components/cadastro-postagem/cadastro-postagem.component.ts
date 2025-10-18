@@ -3,11 +3,12 @@ import { PostagemService } from '../../services/postagem.service';
 import { Postagem } from '../../models/postagem';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-cadastro-postagem',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, NavbarComponent],
   templateUrl: './cadastro-postagem.component.html',
   styleUrl: './cadastro-postagem.component.scss'
 })
