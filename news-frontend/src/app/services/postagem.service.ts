@@ -46,6 +46,10 @@ export class PostagemService {
     return this.http.put<Postagem>(`${this.apiUrl}/${id}`, payload);
   }
 
+  excluir(id: number): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/${id}`);
+  }
+
 
 
 
