@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-// import { environment } from '../../environments/environment.prod';
 import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -28,6 +27,12 @@ export class PostagemService {
   }
 
   cadastrar(postagem: Postagem): Observable<Postagem> {
-    return this.http.post<Postagem>(this.apiUrl, postagem);
+    const payload = {
+      tituloPostagem: postagem.titulo,
+      conteudoPostagem: postagem.conteudo,
+      categoriaPostagem: postagem.categoria,
+      dataPostagem: postagem.data
+    }
+    return this.http.post<Postagem>(this.apiUrl, payload);
   }
 }

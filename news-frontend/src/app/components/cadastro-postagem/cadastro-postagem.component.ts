@@ -19,7 +19,16 @@ export class CadastroPostagemComponent {
 
   cadastrar() {
     this.postagemService.cadastrar(this.postagem).subscribe({
-      next: () => alert('Postagem cadastrada com sucesso!'),
+      next: () => {
+        alert('Postagem cadastrada com sucesso!');
+
+        this.postagem = {
+          titulo: '',
+          conteudo: '',
+          categoria: '',
+          data: new Date().toISOString()
+        }
+      } ,
       error: (err) => console.error(err),
     });
   }
