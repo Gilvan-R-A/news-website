@@ -35,4 +35,26 @@ export class PostagemService {
     }
     return this.http.post<Postagem>(this.apiUrl, payload);
   }
+
+  editar(id: number, postagem: Postagem): Observable<Postagem> {
+    const payload = {
+      tituloPostagem: postagem.titulo,
+      conteudoPostagem: postagem.conteudo,
+      categoriaPostagem: postagem.categoria,
+      dataPostagem: postagem.data
+    };
+    return this.http.put<Postagem>(`${this.apiUrl}/${id}`, payload);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 }
