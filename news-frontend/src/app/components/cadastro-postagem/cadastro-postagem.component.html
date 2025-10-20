@@ -1,16 +1,35 @@
 <app-navbar></app-navbar>
-<div class="form-container">
+
+<div class="container">
+  <div class="form-container">
     <h2>Cadastro de Postagem</h2>
     <form (ngSubmit)="cadastrar()">
-        <input type="text" [(ngModel)]="postagem.titulo" name="titulo" placeholder="Título" required />
+      <input
+        type="text"
+        [(ngModel)]="postagem.titulo"
+        name="titulo"
+        placeholder="Título"
+        required
+      />
 
-        <textarea [(ngModel)]="postagem.conteudo" name="conteudo" placeholder="Conteúdo" required></textarea>
+      <textarea
+        [(ngModel)]="postagem.conteudo"
+        name="conteudo"
+        placeholder="Conteúdo"
+        required
+      ></textarea>
 
-        <input type="text" [(ngModel)]="postagem.categoria" name="categoria" placeholder="Categoria" required />
+      <input
+        type="text"
+        [(ngModel)]="postagem.categoria"
+        name="categoria"
+        placeholder="Categoria"
+        required
+      />
 
-        <button type="submit">Cadastrar</button>
-
+      <button type="submit">Cadastrar</button>
     </form>
+  </div>
 </div>
 
 <app-footer></app-footer>

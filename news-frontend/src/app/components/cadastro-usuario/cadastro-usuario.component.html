@@ -1,16 +1,31 @@
 <app-navbar></app-navbar>
 
-<div class="form-container">
+<div class="container">
+  <div class="form-container">
     <h2>Cadastro de Usuário</h2>
 
     <form (ngSubmit)="cadastrar()">
-        <input type="email" id="emailUsuario" [(ngModel)]="usuario.emailUsuario" name="emailUsuario" placeholder="Email" required />
+      <input
+        type="email"
+        id="emailUsuario"
+        [(ngModel)]="usuario.emailUsuario"
+        name="emailUsuario"
+        placeholder="Email"
+        required
+      />
 
-        <input type="password" [(ngModel)]="usuario.senhaUsuario" id="senhaUsuario" name="senhaUsuario" placeholder="Senha" required />
+      <input
+        type="password"
+        [(ngModel)]="usuario.senhaUsuario"
+        id="senhaUsuario"
+        name="senhaUsuario"
+        placeholder="Senha"
+        required
+      />
 
-        <button type="submit">Cadastrar</button>
-
+      <button type="submit">Cadastrar</button>
     </form>
+  </div>
 </div>
 
 <app-footer></app-footer>
