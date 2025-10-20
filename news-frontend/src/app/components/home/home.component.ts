@@ -6,12 +6,13 @@ import { PostagemService } from '../../services/postagem.service';
 import { Postagem } from '../../models/postagem';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { ListarPostagensComponent } from '../listar-postagens/listar-postagens.component';
+import { FooterComponent } from '../footer/footer.component';
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule, NavbarComponent, ListarPostagensComponent],
+  imports: [CommonModule, RouterModule, NavbarComponent, ListarPostagensComponent, FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
