@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AuthService } from '../../services/auth.service';
@@ -10,16 +10,21 @@ import { AuthService } from '../../services/auth.service';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit{
+  usuarioLogado = false;
+
   constructor(
     private authService: AuthService, 
     private router: Router
   ) {}
 
-  logout() {
-    this.authService.logout();
-    this.router.navigate(['/login']);
+  ngOnInit() {
+    this.usuarioLogado = this.authService.isAuthenticated();    
   }
 
-
+  logout() {
+    this.authService.logout();
+    this.usuarioLogado = false;
+    this.router.navigate(['/login']);
+  }
 }

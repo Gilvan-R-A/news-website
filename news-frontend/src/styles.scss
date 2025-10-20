@@ -129,26 +129,6 @@ textarea {
     margin-bottom: 0.5rem;
 }
 
-nav {
-    background-color: #007bff;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 1rem;
-    font-weight: 500;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
 .footer {
     background-color: #222;
     color: #fff;
@@ -164,15 +144,6 @@ nav a:hover {
 @media (max-width: 768px) {
     .container {
         width: 95%;
-    }
-
-    nav {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav a {
-        margin: 0.5rem 0;
     }
 }
 
