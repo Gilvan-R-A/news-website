@@ -4,11 +4,11 @@ import { Postagem } from '../../models/postagem';
 import { FormsModule } from '@angular/forms';
 import { CommonModule, DatePipe } from '@angular/common';
 import { NavbarComponent } from '../navbar/navbar.component';
-
+import { FooterComponent } from '../footer/footer.component';
 @Component({
   selector: 'app-cadastro-postagem',
   standalone: true,
-  imports: [CommonModule, FormsModule, NavbarComponent],
+  imports: [CommonModule, FormsModule, NavbarComponent, FooterComponent],
   providers: [DatePipe],
   templateUrl: './cadastro-postagem.component.html',
   styleUrl: './cadastro-postagem.component.scss'
