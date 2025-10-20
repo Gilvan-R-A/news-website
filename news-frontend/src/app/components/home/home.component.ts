@@ -5,12 +5,13 @@ import { AuthService } from '../../services/auth.service';
 import { PostagemService } from '../../services/postagem.service';
 import { Postagem } from '../../models/postagem';
 import { NavbarComponent } from '../navbar/navbar.component';
+import { ListarPostagensComponent } from '../listar-postagens/listar-postagens.component';
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule, NavbarComponent],
+  imports: [CommonModule, RouterModule, NavbarComponent, ListarPostagensComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
