@@ -1,1 +1,24 @@
-<p>listar-postagens works!</p>
+<!-- <app-navbar></app-navbar> -->
+
+<div class="container">
+    <h2>Notícias</h2>
+
+    <div *ngFor="let p of postagens" class="postagem-card">
+        <div *ngIf="editando?.id !== p.id">
+            <h3>{{p.titulo}}</h3>
+            <p>{{p.conteudo}}</p>
+            <p><strong>Categoria:</strong> {{ p.categoria }}</p>
+            <p><strong>Data:</strong> {{ p.data }}</p>
+            <button (click)="editarPostagem(p)">Editar</button>
+            <button (click)="excluirPostagem(p.id)">Excluir</button>
+        </div>
+
+        <div *ngIf="editando?.id === p.id && editando" class="form-editar">
+            <input [(ngModel)]="editando.titulo" placeholder="Título" />
+            <textarea [(ngModel)]="editando.conteudo" placeholder="Conteúdo"></textarea>
+            <input [(ngModel)]="editando.categoria" placeholder="Categoria" />
+            <button (click)="salvarEdicao()">Salvar</button>
+            <button (click)="cancelarEdicao()">Cancelar</button>
+        </div>
+    </div>
+</div>
