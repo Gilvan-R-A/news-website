@@ -1,0 +1,118 @@
+.postagem-card {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.postagem-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.postagem-card h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #222;
+    font-weight: 600;
+}
+
+.postagem-card p {
+    margin: 0.25rem 0;
+    color: #555;
+    line-height: 1.5;
+}
+
+.postagem-card strong {
+    color: #333;
+}
+
+.postagem-card button {
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.6rem 1rem;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    color: #fff;
+}
+
+.postagem-card button:nth-of-type(1) {
+    background-color: #07c;
+}
+
+.postagem-card button:nth-of-type(1):hover {
+    background-color: #005fa3;
+    transform: scale(1.03);
+}
+
+.postagem-card button:nth-of-type(2) {
+    background-color: #d9534f;
+}
+
+.postagem-card button:nth-of-type(2):hover {
+    background-color: #b52b27;
+    transform: scale(1.03);
+}
+
+.form-editar input,
+.form-editar textarea {
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    padding: 0.6rem;
+    font-size: 0.95rem;
+    width: 100%;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-editar input:focus,
+.form-editar textarea:focus {
+    border-color: #0077cc;
+    box-shadow: 0 0 0 3px rgba(0,119,204,0.15);
+    outline: none;
+}
+
+.form-editar button {
+    width: fit-content;
+}
+
+.form-editar button:nth-of-type(1) {
+    background-color: #28a745;
+}
+
+.form-editar button:nth-of-type(1):hover {
+    background-color: #218838;
+}
+
+.form-editar button:nth-of-type(2) {
+    background-color: #6c757d;
+}
+
+.form-editar button:nth-of-type(2):hover {
+    background-color: #5a6268;
+}
+
+@media (max-width: 600px) {
+    .postagem-card {
+        padding: 1rem;
+    }
+
+    .postgem-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .postagem-card button {
+        width: 100%;
+    }
+}
+
+
+
+
