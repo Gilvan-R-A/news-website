@@ -12,6 +12,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class NavbarComponent implements OnInit{
   usuarioLogado = false;
+  menuAberto = false;
 
   constructor(
     private authService: AuthService, 
@@ -20,6 +21,14 @@ export class NavbarComponent implements OnInit{
 
   ngOnInit() {
     this.usuarioLogado = this.authService.isAuthenticated();    
+  }
+
+  toggleMenu() {
+    this.menuAberto = !this.menuAberto;
+  }
+
+  fecharMenu() {
+    this.menuAberto = false;
   }
 
   logout() {

@@ -5,9 +5,10 @@ import { CadastroPostagemComponent } from './components/cadastro-postagem/cadast
 import { CadastroUsuarioComponent } from './components/cadastro-usuario/cadastro-usuario.component';
 import { AuthGuard } from './guards/auth.guard';
 import { ListarPostagensComponent } from './components/listar-postagens/listar-postagens.component';
+import { RedirectComponent } from './components/redirect/redirect.component';
 
 export const routes: Routes = [
-    {path: '', redirectTo: 'login', pathMatch: 'full'},
+    {path: '', component: RedirectComponent},
     {path: 'login', component: LoginComponent},
     { path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
     {path: 'cadastro-usuario', component: CadastroUsuarioComponent},
