@@ -20,6 +20,17 @@ body {
     flex: 1;
 }
 
+.container h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 1.8rem;
+    position: relative;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+}
+
 .form-container {
     background-color: #fff;
     padding: 2rem;
