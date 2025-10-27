@@ -1,59 +1,66 @@
-# NewsFrontend
+<h1 align="center">
+    Projeto de Cadastro de Notícias
+</h1>   
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+Aplicação **SPA desenvolvida em Angular** para gerenciamento e publicação de notícias.   
+Versão totalmente atualizada, com autenticação, CRUD de postagens e design responsivo.   
 
-## Development server
+## Tecnologias utilizadas   
 
-To start a local development server, run:
+- Angular 19.0.6
+- TypeScript
+- SCSS (CSS modularizado)
+- Angular Router - navegação SPA   
+- Autenticação JWT
+- Componentização reutilizável 
+- API Node.js/Express - integração com backend  
 
-```bash
+## Estrutura do projeto   
+
+```   
+/
+├── docs/                 # Build gerado para o GitHub Pages
+├── src/
+│   ├── app/
+│   │   ├── components/    # Componentes reutilizáveis (Navbar, Card, Form etc.)
+│   │   ├── guards/        # Protege rotas que exigem autenticação (ex: AuthGuard)
+│   │   ├── interceptors/  # Intercepta requisições HTTP (ex: adiciona token JWT)
+│   │   ├── models/        # Modelos e interfaces TypeScript (User, Postagem etc.)
+│   │   ├── services/      # Serviços de API, autenticação e manipulação de dados
+│   │   └── app.module.ts  # Módulo principal da aplicação
+│   ├── styles.scss        # Estilos globais da aplicação
+│   └── main.ts            # Ponto de entrada do Angular
+├── angular.json           # Configurações do projeto Angular
+├── package.json           # Dependências e scripts npm
+└── README.md              # Documentação do projeto
+
+```   
+
+## Como rodar o projeto localmente   
+
+```  
+# Clonar o repositório
+git clone https://github.com/Gilvan-R-A/news-website
+
+# Instalar dependências
+npm install
+
+# Rodar em modo desenvolvimento
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+# Acessar no navegador
+http://localhost:4200
+```   
 
-## Code scaffolding
+## Autenticação   
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+O sistema utiliza autenticação JWT.   
+O login é obrigatório para criar, editar ou excluir postagens.   
 
-```bash
-ng generate component component-name
-```
+## Recursos   
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Cadastro e login de usuários   
+- Criação, edição e exclusão de postagens   
+- Interface responsiva e intuitiva   
+- Navbar com menu dinâmico
+- Deploy no GitHub Pages
