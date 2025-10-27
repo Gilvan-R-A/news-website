@@ -40,7 +40,9 @@ Versão totalmente atualizada, com autenticação, CRUD de postagens e design re
 
 ```  
 # Clonar o repositório
-git clone https://github.com/Gilvan-R-A/news-website
+git clone https://github.com/Gilvan-R-A/news-website   
+
+cd news-website
 
 # Instalar dependências
 npm install
