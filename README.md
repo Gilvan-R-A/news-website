@@ -1,104 +1,59 @@
-<h1 align="center">
-   Projeto de Cadastro de Notícias
-</h1> 
+# NewsFrontend
 
-Este projeto é um site de cadastro de notícias, onde os usuários podem se registrar, fazer login e cadastrar novas postagens de notícias com títulos, contéudo e categorias. A interface do usuário é responsiva, e a aplicação utiliza tecnologias como HTML, CSS, JavaScript e consumo de APIs para interações com o servidor.   
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
 
-## Estrutura de Diretórios   
+## Development server
 
-```   
+To start a local development server, run:
 
-news-website
-│
-├── css
-│   ├── estilo.css
-│   ├── global.css
-│   └── login.css
-│
-├── js
-│   ├── controller
-│   │   ├── CadastroPostagemController.js
-│   │   ├── PrincipalController.js
-│   │   └── UsuarioLoginController.js
-│   ├── model
-│   │   ├── Postagem.js
-│   │   └── Usuario.js
-│   └── services
-│       ├── PostagemService.js
-│       └── UsuarioService.js
-│
-├── cadastro-noticia.html
-├── cadastro-usuario.html
-├── index.html
-└── login.html   
+```bash
+ng serve
+```
 
-```   
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Descrição dos Arquivos   
+## Code scaffolding
 
-### Arquivos CSS   
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
-- **estilo.css**: Contém o estilo principal do site, com design responsivo para diferentes tamanhos de tela.   
-- **global.css**: Define fontes e inclui o estilo para bibliotecas externas (como o SweetAlert2).   
-- **login.css**:  Especifica o estilo da página de login, incluindo o layout centralizado e estilização dos campos de entrada.   
+```bash
+ng generate component component-name
+```
 
-### Arquivos JavaScript   
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-**Controllers**   
+```bash
+ng generate --help
+```
 
-- **CadastroPostagemController.js**: Controla a lógica para cadastro de novas postagens, validando campos e interagindo com o serviço de postagens.   
-- **PrincipalController.js**: Exibe as postagens cadastradas em formato de cartões dinâmicos na página principal.   
-- **UsuarioLoginController.js**: Gerencia o processo de login de usuários, validando os dados e redirecionando para a página principal se o login for bem-sucedido.   
+## Building
 
-**Models**   
+To build the project run:
 
-- **Postagem.js**: Define a estrutura de uma postagem, com propriedades como título, conteúdo, categoria e data.   
-- **Usuario.js**: Define a estrutura de um usuário, com propriedades como ID, email e senha.   
+```bash
+ng build
+```
 
-**Services**   
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-- **PostagemService.js**: Contém métodos assíncronos para listar, cadastrar, alterar e excluir postagens no backend.   
-- **UsuarioService.js**: Define o serviço responsável pelo login de usuários, validando suas credenciais.   
+## Running unit tests
 
+To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
 
-## Tecnologias Utilizadas   
+```bash
+ng test
+```
 
-- **HTML5**: Para a estruturação das páginas.
-- **CSS3**: Para o estilo das páginas.
-- **JavaScript**: Para a lógica do frontend e interações com o servidor.
-- **Fetch API**: Para fazer requisições HTTP ao backend.   
-- **SweetAlert2**: Para exibir alertas personalizados   
+## Running end-to-end tests
 
-## Como Rodar o Projeto   
+For end-to-end (e2e) testing, run:
 
-### 1. Clonando o Repositório  
+```bash
+ng e2e
+```
 
-```  
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-git clone https://github.com/Gilvan-R-A/news-website
-cd news-website   
+## Additional Resources
 
-```  
-
-### 2. Configurando o Backend   
-
-Este projeto simula um backend usando o fetch para interagir com uma API local.   
-
-### 3. Executando o Projeto   
-
-Abra o arquivo index.html em seu navegador para visualizar a página principal. As interações com o formulário de cadastro e login estarão disponíveis para os usuários.   
-Para que as funcionalidades de cadastro e login funcionem corretamente, o servidor de backend (API) deve estar rodando em **http://localhost:3000**. Você pode configurar a API utilizando qualquer backend, como Node.js.   
-
-## Contribuições   
-
-Contribuições são bem-vindas! Se você tem sugestões de melhorias ou correções fique à vontade para abrir um pull request.
-
-
-
-
-
-
-
-
-
-
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
