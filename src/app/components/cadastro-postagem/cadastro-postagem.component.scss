@@ -1,0 +1,38 @@
+textarea {
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.erro {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.invalido {
+    border-color: #e74c3c !important; 
+    background-color: #fff5f5;
+}
+

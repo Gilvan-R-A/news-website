@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { PostagemService } from '../../services/postagem.service';
 import { Postagem } from '../../models/postagem';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule, DatePipe } from '@angular/common';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { FooterComponent } from '../footer/footer.component';
@@ -21,7 +21,9 @@ export class CadastroPostagemComponent {
     private datePipe: DatePipe
   ) {}
 
-  cadastrar() {
+  cadastrar(form: NgForm) {
+    if (form.invalid) return;
+
     const dataFormatada = this.datePipe.transform(new Date(), 'dd/MM/yyyy') || '';
 
     const postagemComDataFormatada: Postagem = {
@@ -32,13 +34,7 @@ export class CadastroPostagemComponent {
     this.postagemService.cadastrar(postagemComDataFormatada).subscribe({
       next: () => {
         alert('Postagem cadastrada com sucesso!');
-
-        this.postagem = {
-          titulo: '',
-          conteudo: '',
-          categoria: '',
-          data: new Date().toISOString()
-        }
+        form.resetForm();
       } ,
       error: (err) => console.error(err),
     });
